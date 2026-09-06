@@ -216,6 +216,7 @@ section { max-width: 920px; margin: 0 auto; padding: 56px 0 0; }
 .scrapers-block a {
   font-weight: 600;
   border-bottom: 2px solid var(--red);
+  white-space: nowrap;
 }
 
 .scrapers-block a:hover {
