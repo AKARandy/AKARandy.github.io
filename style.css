@@ -40,6 +40,39 @@ a:hover { color: var(--red); }
   padding: 28px 0 8px;
 }
 
+/* Sticky section nav */
+.section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--paper);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 0;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.section-nav a {
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  padding: 5px 13px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.section-nav a:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--paper-2);
+}
+
+section { scroll-margin-top: 78px; }
+
 /* Hero */
 .role {
   font-family: "Playfair Display", serif;
