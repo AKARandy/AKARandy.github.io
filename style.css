@@ -140,7 +140,7 @@ section { scroll-margin-top: 78px; }
   border-radius: 28px;
   max-width: 920px;
   margin: 26px auto 0;
-  height: clamp(320px, 52vw, 520px);
+  height: clamp(300px, 44vw, 460px);
   display: flex;
   align-items: flex-end;
   justify-content: center;
