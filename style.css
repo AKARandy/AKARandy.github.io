@@ -184,6 +184,44 @@ section { max-width: 920px; margin: 0 auto; padding: 56px 0 0; }
   color: var(--gray);
 }
 
+/* Web scrapers block */
+.scrapers-block {
+  border: 2px solid var(--ink);
+  border-radius: 28px;
+  padding: clamp(24px, 4vw, 44px);
+}
+
+.scrapers-title {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.scrapers-sub {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  margin-bottom: 18px;
+}
+
+.scrapers-block p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.scrapers-block a {
+  font-weight: 600;
+  border-bottom: 2px solid var(--red);
+}
+
+.scrapers-block a:hover {
+  color: var(--red);
+}
+
 /* Rows for experience, education, certifications */
 .rows { display: grid; gap: 18px; }
 
