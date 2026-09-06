@@ -241,19 +241,30 @@ section { max-width: 920px; margin: 0 auto; padding: 56px 0 0; }
   color: var(--gray);
 }
 
-.project.case { grid-column: 1 / -1; }
+.star { color: var(--red); font-size: 0.9em; }
 
-.case-label {
-  font-family: "Archivo Black", sans-serif;
-  font-weight: 400;
-  font-size: 0.82rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--red);
-  margin: 16px 0 4px;
+.case-details { margin-top: 10px; }
+
+.case-details summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--gray);
+  border-bottom: 1.5px solid var(--gray-soft);
 }
 
-.project.case h3 { margin-bottom: 2px; }
+.case-details summary::-webkit-details-marker { display: none; }
+
+.case-details summary:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+.case-details[open] summary { color: var(--red); border-color: var(--red); }
+
+.case-details p { font-size: 0.9rem; margin: 8px 0; }
 
 .more-line {
   margin-top: 14px;

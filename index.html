@@ -53,8 +53,20 @@
   <div class="project-grid">
 
     <article class="project">
+      <h3><a href="https://github.com/AKARandy/Self-Retraining-Model-Platform"><span class="star">&#9733;</span> Self-Retraining-Model-Platform <span class="arr">&#8599;</span></a></h3>
+      <p>MLOps platform running one closed loop. Drift detection triggers automatic retraining, conditional promotion, and zero redeploy serving.</p>
+      <details class="case-details">
+        <summary>More about this project</summary>
+        <p>One FastAPI app over real infrastructure, Postgres, MinIO, MLflow, and Argo Workflows on Kubernetes. An 8 node DAG runs ingest, validate, feature engineering, Optuna search next to a PyTorch MLP branch, evaluation with a conditional promotion gate, then SHAP and promotion. A cron workflow batch scores every hour, and a React dashboard watches the loop live.</p>
+        <p>The first runs produced metrics too good to be true, and they were. SHAP exposed target leakage, the promotion gate refused that candidate on its own, and the clean model is the one that serves.</p>
+        <p>If I revisited it, I would use stronger drift statistics, MLflow model aliases instead of pinned stages, and deeper feature engineering.</p>
+      </details>
+      <ul class="tools"><li>FastAPI</li><li>Postgres</li><li>MinIO</li><li>MLflow</li><li>Argo Workflows</li><li>Kubernetes</li><li>DVC</li><li>Optuna</li><li>PyTorch</li><li>React</li><li>Docker</li></ul>
+    </article>
+
+    <article class="project">
       <h3><a href="https://github.com/AKARandy/tanya-sekolah">tanya-sekolah <span class="arr">&#8599;</span></a></h3>
-      <p>Natural language Q&A over 2,269 Surabaya and Sidoarjo schools, with tuition estimates for the schools that never publish fees. Hand written LLM routing, text to SQL guard, and RAG. Cross validated MAE of Rp689k ± Rp292k.</p>
+      <p>Natural language Q&A over 2,269 Surabaya and Sidoarjo schools, with tuition estimates for the schools that never publish fees. Hand written LLM routing, text to SQL guard, and RAG.</p>
       <ul class="tools"><li>Python</li><li>SQLite</li><li>ChromaDB</li><li>fastembed</li><li>CatBoost</li><li>OpenAI compatible SDK</li><li>Selenium</li><li>Docker</li></ul>
     </article>
 
@@ -80,19 +92,6 @@
       <h3><a href="https://github.com/AKARandy/Qwen-on-Kaggle-via-zrok-and-API">Qwen-on-Kaggle-via-zrok-and-API <span class="arr">&#8599;</span></a></h3>
       <p>Serving Qwen 27B (Q4) on free Kaggle GPUs through zrok as an OpenAI compatible API.</p>
       <ul class="tools"><li>Qwen</li><li>zrok</li><li>Kaggle</li><li>OpenAI compatible API</li></ul>
-    </article>
-
-    <article class="project case">
-      <h3><a href="https://github.com/AKARandy/Self-Retraining-Model-Platform">Case study, Self-Retraining-Model-Platform <span class="arr">&#8599;</span></a></h3>
-      <p class="case-label">The problem</p>
-      <p>In production, models go stale quietly. Drift goes unnoticed, and retraining waits for someone to find the time.</p>
-      <p class="case-label">The architecture</p>
-      <p>One FastAPI app over real infrastructure, Postgres, MinIO, MLflow, and Argo Workflows on Kubernetes. An 8 node DAG runs ingest, validate, feature engineering, Optuna search next to a PyTorch MLP branch, evaluation with a conditional promotion gate, then SHAP and promotion. A cron workflow batch scores every hour, and a React dashboard watches the loop live.</p>
-      <p class="case-label">The war story</p>
-      <p>The first runs produced metrics too good to be true, and they were. SHAP exposed target leakage, the promotion gate refused that candidate on its own, and the clean model is the one that serves.</p>
-      <p class="case-label">What I would change</p>
-      <p>Stronger drift statistics, MLflow model aliases instead of pinned stages, and deeper feature engineering.</p>
-      <ul class="tools"><li>FastAPI</li><li>Postgres</li><li>MinIO</li><li>MLflow</li><li>Argo Workflows</li><li>Kubernetes</li><li>DVC</li><li>Optuna</li><li>PyTorch</li><li>React</li><li>Docker</li></ul>
     </article>
 
   </div>
