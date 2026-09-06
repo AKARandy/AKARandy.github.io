@@ -71,6 +71,12 @@ a:hover { color: var(--red); }
   color: var(--paper-2);
 }
 
+.section-nav a.active {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--paper-2);
+}
+
 section { scroll-margin-top: 78px; }
 
 /* Hero */
