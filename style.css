@@ -118,10 +118,6 @@ a:hover { color: var(--red); }
   box-shadow: 0 18px 44px rgba(53, 53, 54, 0.28);
 }
 
-/* Stat pills under the card */
-.stats { margin-top: 22px; }
-.stats li { border-color: var(--gray-soft); color: var(--gray); }
-
 /* Sections */
 section { max-width: 920px; margin: 0 auto; padding: 56px 0 0; }
 
