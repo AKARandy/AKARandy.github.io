@@ -223,6 +223,12 @@ section { max-width: 920px; margin: 0 auto; padding: 56px 0 0; }
   color: var(--red);
 }
 
+.scrapers-connect {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1.5px solid var(--gray-soft);
+}
+
 /* Rows for experience, education, certifications */
 .rows { display: grid; gap: 18px; }
 
