@@ -26,7 +26,6 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
-a:hover { color: var(--red); }
 .arr { font-size: 0.85em; }
 
 /* Top label, like the small centered text on the poster */
@@ -63,9 +62,10 @@ a:hover { color: var(--red); }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.section-nav a:hover {
+.section-nav a:active {
   background: var(--red);
   border-color: var(--red);
   color: var(--paper-2);
@@ -130,8 +130,6 @@ section { scroll-margin-top: 78px; }
 }
 .pills li.pill-red a,
 .pills .pill-red a { color: var(--paper-2); }
-.pills li.pill-red a:hover,
-.pills .pill-red a:hover { color: var(--pink); }
 
 /* Hero card, the rounded red panel with the portrait breaking its top edge */
 .hero-card {
@@ -219,8 +217,6 @@ section { max-width: 920px; margin: 0 auto; padding: 56px 0 0; }
   margin-bottom: 8px;
 }
 
-.project h3 a:hover { color: var(--red); }
-
 .project p { font-size: 0.92rem; margin-bottom: 12px; }
 
 .tools {
@@ -256,11 +252,6 @@ section { max-width: 920px; margin: 0 auto; padding: 56px 0 0; }
 }
 
 .case-details summary::-webkit-details-marker { display: none; }
-
-.case-details summary:hover {
-  color: var(--red);
-  border-color: var(--red);
-}
 
 .case-details[open] summary { color: var(--red); border-color: var(--red); }
 
@@ -305,10 +296,6 @@ section { max-width: 920px; margin: 0 auto; padding: 56px 0 0; }
   font-weight: 600;
   border-bottom: 2px solid var(--red);
   white-space: nowrap;
-}
-
-.scrapers-block a:hover {
-  color: var(--red);
 }
 
 /* Rows for experience, education, certifications */
@@ -359,6 +346,30 @@ footer {
   text-align: center;
   font-size: 0.8rem;
   color: var(--gray);
+}
+
+/* Hover styling only where a real hover exists. On touch phones :hover
+   fires on tap and sticks, which left stale red pills behind. */
+@media (hover: hover) {
+  a:hover { color: var(--red); }
+
+  .section-nav a:hover {
+    background: var(--red);
+    border-color: var(--red);
+    color: var(--paper-2);
+  }
+
+  .pills li.pill-red a:hover,
+  .pills .pill-red a:hover { color: var(--pink); }
+
+  .project h3 a:hover { color: var(--red); }
+
+  .case-details summary:hover {
+    color: var(--red);
+    border-color: var(--red);
+  }
+
+  .scrapers-block a:hover { color: var(--red); }
 }
 
 @media (max-width: 560px) {
