@@ -342,7 +342,7 @@ section { max-width: 920px; margin: 0 auto; padding: 56px 0 0; }
 footer {
   max-width: 920px;
   margin: 0 auto;
-  padding: 48px 0 40px;
+  padding: 48px 0 160px;
   text-align: center;
   font-size: 0.8rem;
   color: var(--gray);
