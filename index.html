@@ -58,7 +58,6 @@
       <details class="case-details">
         <summary>More about this project</summary>
         <p>One FastAPI app over real infrastructure, Postgres, MinIO, MLflow, and Argo Workflows on Kubernetes. An 8 node DAG runs ingest, validate, feature engineering, Optuna search next to a PyTorch MLP branch, evaluation with a conditional promotion gate, then SHAP and promotion. A cron workflow batch scores every hour, and a React dashboard watches the loop live.</p>
-        <p>The first runs produced metrics too good to be true, and they were. SHAP exposed target leakage, the promotion gate refused that candidate on its own, and the clean model is the one that serves.</p>
         <p>If I revisited it, I would use stronger drift statistics, MLflow model aliases instead of pinned stages, and deeper feature engineering.</p>
       </details>
       <ul class="tools"><li>FastAPI</li><li>Postgres</li><li>MinIO</li><li>MLflow</li><li>Argo Workflows</li><li>Kubernetes</li><li>DVC</li><li>Optuna</li><li>PyTorch</li><li>React</li><li>Docker</li></ul>
