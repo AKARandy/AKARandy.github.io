@@ -14,20 +14,8 @@ function setActive(id) {
   if (link) link.classList.add("active");
 }
 
-// A tap names the correct pill at once. The observer stays quiet while the
-// smooth scroll travels, so passing sections cannot steal the highlight.
-let lastTap = 0;
-
-links.forEach((link) => {
-  link.addEventListener("click", () => {
-    lastTap = Date.now();
-    setActive(link.getAttribute("href").slice(1));
-  });
-});
-
 const observer = new IntersectionObserver(
   (entries) => {
-    if (Date.now() - lastTap < 1000) return;
     entries.forEach((entry) => {
       if (entry.isIntersecting) setActive(entry.target.id);
     });
