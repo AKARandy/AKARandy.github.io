@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alief Randiansyah Pradanaputra. Portfolio</title>
-<meta name="description" content="Portfolio of Alief Randiansyah Pradanaputra. Mathematics graduate from ITS. Data analysis and machine learning.">
+<meta name="description" content="Alief Randiansyah Pradanaputra: data analysis, applied AI, and Python systems. Explore data quality pipelines, business analysis, RAG applications, and MLOps projects.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Playfair+Display:ital,wght@1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,7 +14,9 @@
 
 <p class="top-label">Portfolio</p>
 
-<nav class="section-nav">
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="section-nav" aria-label="Portfolio sections">
+  <a href="#impact">Highlights</a>
   <a href="#projects">Projects</a>
   <a href="#scrapers">Web scrapers</a>
   <a href="#experience">Experience</a>
@@ -25,47 +27,81 @@
   <a href="#contact">Contact</a>
 </nav>
 
-<section class="hero">
+<main id="main">
+<section class="hero" aria-labelledby="name">
   <p class="role">Math Graduate. Data and ML. Occasional Game Dev.</p>
-  <h1 class="name">Alief Randiansyah<br>Pradanaputra.</h1>
+  <h1 class="name" id="name">Alief Randiansyah<br>Pradanaputra.</h1>
 
   <ul class="pills">
     <li><a href="https://github.com/AKARandy">GitHub <span class="arr">&#8599;</span></a></li>
     <li><a href="https://www.linkedin.com/in/alief-randiansyah">LinkedIn <span class="arr">&#8599;</span></a></li>
     <li>Mathematics, ITS</li>
     <li>Data Analysis</li>
-    <li>Machine Learning</li>
+    <li>Applied AI</li>
     <li>Bekasi, West Java</li>
-    <li><a href="assets/CV_Alief_Randiansyah_Pradanaputra.pdf" download>Download CV <span class="arr">&#8595;</span></a></li>
+    <li class="pill-red"><a href="assets/CV_Alief_Randiansyah_Pradanaputra.pdf" download>Download CV <span class="arr">&#8595;</span></a></li>
   </ul>
 
   <div class="hero-card">
-    <p class="hero-about">Hi! I'm Alief, a mathematics graduate from ITS who loves turning messy data into things people can actually use. Most of my projects start the same way, a website full of useful information and no easy way to get it. So I build the scraper, train the model, and sometimes wrap the whole thing in an app you can talk to.</p>
+    <div class="hero-about"><p>Hi! I'm Alief, a mathematics graduate from ITS. I work with data, build scrapers, and experiment with machine learning and LLMs. Some of that work comes from my internships; some starts with a dataset or a question I find interesting. Here are the things I've been working on.</p></div>
     <div class="portrait-wrap">
-      <img class="portrait" src="assets/portrait.png" alt="Portrait of Alief Randiansyah Pradanaputra">
+      <img width="380" height="380" class="portrait" src="assets/portrait.png" alt="Portrait of Alief Randiansyah Pradanaputra">
       <span class="portrait-tint"></span>
     </div>
   </div>
 </section>
 
-<section id="projects">
-  <h2 class="section-label">Projects</h2>
-  <div class="project-grid">
 
-    <article class="project">
-      <h3><a href="https://github.com/AKARandy/Self-Retraining-Model-Platform"><span class="star">&#9733;</span> Self-Retraining-Model-Platform <span class="arr">&#8599;</span></a></h3>
-      <p>MLOps platform running one closed loop. Drift detection triggers automatic retraining, conditional promotion, and zero redeploy serving.</p>
-      <details class="case-details">
-        <summary>More about this project</summary>
-        <p>One FastAPI app over real infrastructure, Postgres, MinIO, MLflow, and Argo Workflows on Kubernetes. An 8 node DAG runs ingest, validate, feature engineering, Optuna search next to a PyTorch MLP branch, evaluation with a conditional promotion gate, then SHAP and promotion. A cron workflow batch scores every hour, and a React dashboard watches the loop live.</p>
-        <p>If I revisited it, I would use stronger drift statistics, MLflow model aliases instead of pinned stages, and deeper feature engineering.</p>
+<section id="impact" aria-labelledby="impact-title">
+  <h2 class="section-label" id="impact-title">A few highlights</h2>
+  <div class="impact-grid">
+    <a class="impact-item" href="#experience"><strong>60+</strong><span>airlines covered by a data-quality pipeline</span><small>Hundreds of thousands of records · 23 validation checks</small></a>
+    <a class="impact-item" href="#experience"><strong>First 5</strong><span>school customers supported by K–12 analysis</span><small>Core contributor to SEVIMA's initial data work</small></a>
+    <a class="impact-item" href="#project-tanya"><strong>2,269</strong><span>schools in a natural-language Q&amp;A application</span><small>SQL retrieval · multilingual RAG · tuition estimates</small></a>
+    <a class="impact-item" href="#honors"><strong>Top 20</strong><span>Microsoft AI Impact Challenge Datathon 2026</span><small>DAWG-ID · 38 Indonesian provinces</small></a>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-label">Selected projects</h2>
+  <p class="section-intro">From data collection to a working interface. Open a case note for the problem, the engineering decisions, and the limits.</p>
+  <div class="project-grid">
+    <article class="project featured" id="project-tanya">
+      <p class="project-kind">01 / Applied AI</p>
+      <h3><a href="https://github.com/AKARandy/tanya-sekolah">Tanya Sekolah <span class="arr">&#8599;</span></a></h3>
+      <p class="project-lead">School Q&amp;A with SQL, retrieval, and tuition estimates.</p>
+      <p>School information from four government portals, brought into one application covering 2,269 schools. Ask a question in Indonesian or English; get structured data, relevant school profiles, or a clearly labeled tuition estimate.</p>
+      <details class="case-details"><summary>Read the engineering notes</summary>
+        <p><strong>Built:</strong> Selenium data collection, SQLite preparation, ChromaDB retrieval with multilingual embeddings, and a CatBoost tuition model, exposed through FastAPI and packaged with Docker.</p>
+        <p><strong>Reliability:</strong> Hand-written LLM routing, guarded read-only SQL, semantic-search fallbacks, and automated tests for data preparation, API behavior, and SQL safeguards.</p>
+        <p><strong>Scope:</strong> Surabaya and Sidoarjo. Tuition predictions are estimates, not exact quotes; recorded fees and model estimates are distinguished in the answer.</p>
       </details>
-      <ul class="tools"><li>Python</li><li>FastAPI</li><li>Postgres</li><li>MinIO</li><li>MLflow</li><li>Argo Workflows</li><li>Kubernetes</li><li>DVC</li><li>Optuna</li><li>PyTorch</li><li>React</li><li>Docker</li><li>MLOps</li><li>Drift Detection</li></ul>
+      <ul class="tools"><li>Python</li><li>FastAPI</li><li>RAG</li><li>SQLite</li><li>ChromaDB</li><li>CatBoost</li><li>Docker</li></ul>
     </article>
 
-    <article class="project">
-      <h3><a href="https://github.com/AKARandy/Lights-vs-Numbers"><span class="star">&#9733;</span> Lights-vs-Numbers <span class="arr">&#8599;</span></a></h3>
-      <p>Data analysis: Indonesia's official GDP against independent activity signals, PortWatch shipping, search trends and night lights. 42-quarter sourced dataset, annotated Plotly charts, Streamlit dashboard plus a <a href="https://akarandy.github.io/Lights-vs-Numbers/">live static mirror</a>, CI green.</p>
+    <article class="project featured">
+      <p class="project-kind">02 / ML engineering</p>
+      <h3><a href="https://github.com/AKARandy/Self-Retraining-Model-Platform">Self-Retraining Model Platform <span class="arr">&#8599;</span></a></h3>
+      <p class="project-lead">A local experiment in automated model retraining.</p>
+      <p>A complete model lifecycle running locally in containers: ingestion, training, evaluation, serving, and monitoring. A drift signal starts retraining; an evaluation gate keeps a weaker challenger from replacing the current model.</p>
+      <details class="case-details"><summary>Read the engineering notes</summary>
+        <p><strong>Built:</strong> FastAPI over PostgreSQL, MinIO, and MLflow, with an eight-step Argo training workflow on local Kubernetes. DVC tracks dataset versions; a React dashboard shows runs and monitoring results.</p>
+        <p><strong>Reliability:</strong> Prediction logging, audited writes, conditional promotion, model swaps without API redeployment, and automated checks through GitHub Actions.</p>
+        <p><strong>Scope:</strong> Demonstrated on a local regression workload. Cloud deployment and stronger drift statistics are future improvements, not claimed production capabilities.</p>
+      </details>
+      <ul class="tools"><li>FastAPI</li><li>MLflow</li><li>Argo Workflows</li><li>Kubernetes</li><li>PostgreSQL</li><li>DVC</li><li>Docker</li></ul>
+    </article>
+
+    <article class="project featured project-wide">
+      <p class="project-kind">03 / Data analysis</p>
+      <h3><a href="https://github.com/AKARandy/Lights-vs-Numbers">Lights vs Numbers <span class="arr">&#8599;</span></a></h3>
+      <p class="project-lead">What do activity signals say alongside official GDP?</p>
+      <p>Cleaned and aligned shipping activity, Google Trends, and official GDP series across different time frequencies, then turned the analysis into annotated Plotly charts and a Streamlit dashboard.</p>
+      <details class="case-details"><summary>Read the analysis notes</summary>
+        <p><strong>Method:</strong> Traceable sources, explicit aggregation, and descriptive comparisons. The dashboard separates sample series from live data; night-light and electricity examples are not presented as fully integrated live feeds.</p>
+        <p><strong>Scope:</strong> These comparisons explore patterns, not causal proof or a claim that official GDP is incorrect.</p>
+      </details>
+      <p><a class="text-link" href="https://akarandy.github.io/Lights-vs-Numbers/">Explore the dashboard <span aria-hidden="true">&#8599;</span></a></p>
       <ul class="tools"><li>Python</li><li>pandas</li><li>Plotly</li><li>Streamlit</li><li>GitHub Actions</li></ul>
     </article>
 
@@ -76,21 +112,9 @@
     </article>
 
     <article class="project">
-      <h3><a href="https://github.com/AKARandy/tanya-sekolah">tanya-sekolah <span class="arr">&#8599;</span></a></h3>
-      <p>Natural language Q&A over 2,269 Surabaya and Sidoarjo schools, with tuition estimates for the schools that never publish fees. Hand written LLM routing, text to SQL guard, and RAG.</p>
-      <ul class="tools"><li>Python</li><li>LLM</li><li>RAG</li><li>Question Answering</li><li>SQLite</li><li>ChromaDB</li><li>fastembed</li><li>CatBoost</li><li>OpenAI compatible SDK</li><li>Selenium</li><li>Docker</li></ul>
-    </article>
-
-    <article class="project">
-      <h3><a href="https://github.com/AKARandy/InternProject-SPP_Sekolah">InternProject-SPP_Sekolah <span class="arr">&#8599;</span></a></h3>
+      <h3><a href="https://github.com/AKARandy/InternProject-SPP_Sekolah">School Tuition Modeling <span class="arr">&#8599;</span></a></h3>
       <p>SEVIMA intern project. Scraping notebooks and grid search cross validation behind the school tuition model. Four government portals unified into one dataset.</p>
       <ul class="tools"><li>Python</li><li>Selenium</li><li>Jupyter</li><li>Cross validation</li><li>Web Scraping</li><li>Machine Learning</li><li>CatBoost</li></ul>
-    </article>
-
-    <article class="project">
-      <h3><a href="https://github.com/AKARandy/kacasaham">KacaSaham <span class="arr">&#8599;</span></a></h3>
-      <p>Weekly Telegram digest that scores IDX stocks 0 to 100 on trust and resilience, with an evidence link for every claim. Sectors Hackathon 2026.</p>
-      <ul class="tools"><li>Python</li><li>SQLite</li><li>Telegram</li><li>Telegram Bot API</li><li>Sectors API</li><li>Stocks</li><li>Data Analysis</li><li>LLM</li></ul>
     </article>
 
     <article class="project">
@@ -100,7 +124,13 @@
     </article>
 
     <article class="project">
-      <h3><a href="https://github.com/AKARandy/Qwen-on-Kaggle-TPU-via-zrok-and-API">Qwen-on-Kaggle-TPU-via-zrok-and-API <span class="arr">&#8599;</span></a></h3>
+      <h3><a href="https://github.com/AKARandy/kacasaham">KacaSaham <span class="arr">&#8599;</span></a></h3>
+      <p>Weekly Telegram digest that scores IDX stocks 0 to 100 on trust and resilience, with an evidence link for every claim. Sectors Hackathon 2026.</p>
+      <ul class="tools"><li>Python</li><li>SQLite</li><li>Telegram</li><li>Telegram Bot API</li><li>Sectors API</li><li>Stocks</li><li>Data Analysis</li><li>LLM</li></ul>
+    </article>
+
+    <article class="project">
+      <h3><a href="https://github.com/AKARandy/Qwen-on-Kaggle-TPU-via-zrok-and-API">Qwen on Kaggle TPU <span class="arr">&#8599;</span></a></h3>
       <p>Serving Qwen 27B (BF-16) on free Kaggle TPUs through zrok as an OpenAI compatible API.</p>
       <ul class="tools"><li>Qwen</li><li>LLM</li><li>Model Serving</li><li>zrok</li><li>Kaggle</li><li>TPU</li><li>OpenAI compatible API</li></ul>
     </article>
@@ -111,22 +141,33 @@
 <section id="scrapers">
   <div class="scrapers-block">
     <h2 class="scrapers-title">Web scrapers!</h2>
-    <p class="scrapers-sub">Many of them!</p>
-    <p><a href="https://github.com/AKARandy/dapodikdasmen-scraper">Dapodikdasmen</a>, <a href="https://github.com/AKARandy/sekolah-kita-extractor">Sekolah Kita</a>, and <a href="https://github.com/AKARandy/verval-yayasan-crawler">Verval Yayasan</a> are school portals, and not one of them offers an API. So each gets its own scraper, built around how the site actually behaves. Dapodikdasmen gives up school listings district by district with retry logic and batch CSV, Sekolah Kita profiles come down by NPSN code with checkpoint and resume, and Verval Yayasan gets crawled six levels deep with async Python. Together they feed one dataset, which turned into <a href="https://github.com/AKARandy/InternProject-SPP_Sekolah">InternProject-SPP_Sekolah</a>, the tuition prediction project, and then <a href="https://github.com/AKARandy/tanya-sekolah">tanya-sekolah</a>, the LLM assistant built on top of it.</p>
+    <p class="scrapers-sub">The data work starts before the dataset exists.</p>
+    <p><a href="https://github.com/AKARandy/dapodikdasmen-scraper">Dapodikdasmen</a>, <a href="https://github.com/AKARandy/sekolah-kita-extractor">Sekolah Kita</a>, and <a href="https://github.com/AKARandy/verval-yayasan-crawler">Verval Yayasan</a> collect from separate school portals. Each scraper is built around how its source behaves. Dapodikdasmen gives up school listings district by district with retry logic and batch CSV, Sekolah Kita profiles come down by NPSN code with checkpoint and resume, and Verval Yayasan gets crawled six levels deep with async Python. Together they feed one dataset, which turned into <a href="https://github.com/AKARandy/InternProject-SPP_Sekolah">InternProject-SPP_Sekolah</a>, the tuition prediction project, and then <a href="https://github.com/AKARandy/tanya-sekolah">tanya-sekolah</a>, the LLM assistant built on top of it.</p>
     <p><a href="https://github.com/AKARandy/pddikti-scraper">PDDIKTI</a> is educational too but serves a different purpose, covering universities rather than schools in the national higher education database. Scraped across semesters with a multithreaded Selenium setup.</p>
-    <p>Separate from all of that sits <a href="https://github.com/AKARandy/linkedin-job-scraper">LinkedIn jobs</a>, scraped with login persistence, random delays, and anti-detection.</p>
+    <p>Another project is <a href="https://github.com/AKARandy/linkedin-job-scraper">LinkedIn jobs</a>, collected with session persistence and configurable pacing.</p>
   </div>
 </section>
 
 <section id="experience">
   <h2 class="section-label">Experience</h2>
   <div class="rows">
+    <div class="row experience-featured">
+      <div class="row-head"><h3>Pranata Komputer Intern. Pusdatin Kementerian Perhubungan RI</h3><p class="dates">Sep 2026 to present · Jakarta</p></div>
+      <p class="row-summary">Data validation and reporting for airline submissions.</p>
+      <ul>
+        <li>Built a pipeline and dashboard processing hundreds of thousands of passenger records from more than 60 airlines.</li>
+        <li>Implemented 23 checks derived from the ministry's reporting guideline and aggregated results into per-airline and per-day quality scorecards, served through FastAPI.</li>
+        <li>Designed a production architecture with a scheduled worker, MySQL storage, and monthly ingestion; documented requirements, system design, and an operational runbook.</li>
+      </ul>
+    </div>
+
     <div class="row">
       <div class="row-head">
-        <h3>Data Analyst. SEVIMA, Surabaya</h3>
+        <h3>Data Analyst Intern. SEVIMA, Surabaya</h3>
         <p class="dates">Feb 2025 to Aug 2025</p>
       </div>
-      <p>Analyzed active user thresholds and scored prospective K-12 customers with machine learning. Scraped school and PDDIKTI data for SEVIMA and its clients.</p>
+      <p class="row-summary">Helped launch the K–12 program through its initial data work.</p>
+      <ul><li>Core contributor to the program's early data work, building tuition-fee analysis and machine-learning customer scoring that supported acquisition of its first five school customers.</li><li>Scraped and consolidated school and PDDIKTI data for SEVIMA and its clients, and analyzed active-user thresholds on the SiAkad platform.</li></ul>
     </div>
     <div class="row">
       <div class="row-head">
@@ -152,7 +193,7 @@
     <div class="row">
       <div class="row-head">
         <h3>Programmer. Ganesha Interactive Media (GIM), Bandung</h3>
-        <p class="dates">Sep 2023 to present</p>
+        <p class="dates">Sep 2023 to Aug 2026</p>
       </div>
       <p>Game programming practice in Godot Engine in a multi role team.</p>
     </div>
@@ -219,48 +260,18 @@
 </section>
 
 <section id="skills">
-  <h2 class="section-label">Skills</h2>
-  <ul class="pills">
-    <li>Python</li>
-    <li>Java</li>
-    <li>GDScript</li>
-    <li>LaTeX</li>
-    <li>Machine Learning</li>
-    <li>Time Series Forecasting</li>
-    <li>Data Analysis</li>
-    <li>Web Scraping</li>
-    <li>LLMOps</li>
-    <li>OCR</li>
-    <li>pandas</li>
-    <li>Plotly</li>
-    <li>Streamlit</li>
-    <li>GitHub Actions</li>
-    <li>Docker</li>
-    <li>Kubernetes</li>
-    <li>Argo Workflows</li>
-    <li>MLflow</li>
-    <li>DVC</li>
-    <li>Optuna</li>
-    <li>Flask</li>
-    <li>FastAPI</li>
-    <li>pytest</li>
-    <li>Playwright</li>
-    <li>PyTorch</li>
-    <li>React</li>
-    <li>SQLite</li>
-    <li>PostgreSQL</li>
-    <li>Selenium</li>
-    <li>Jupyter</li>
-    <li>LLM</li>
-    <li>RAG</li>
-    <li>Tesseract</li>
-    <li>OpenCV</li>
-    <li>MLOps</li>
-  </ul>
+  <h2 class="section-label">Skills &amp; tools</h2>
+  <div class="skill-groups">
+    <div><h3>Data &amp; analysis</h3><p>Python · pandas · SQL · PostgreSQL · SQLite · Google Sheets · Selenium · Plotly · Streamlit</p></div>
+    <div><h3>Applied AI &amp; ML</h3><p>LLM APIs · RAG · ChromaDB · fastembed · CatBoost · PyTorch · Optuna · OCR</p></div>
+    <div><h3>Backend &amp; delivery</h3><p>FastAPI · Flask · Docker · Kubernetes · Argo Workflows · MLflow · DVC · GitHub Actions · pytest · Playwright</p></div>
+    <div><h3>Beyond the data stack</h3><p>React · Java · Godot / GDScript · LaTeX. I still make room for game development.</p></div>
+  </div>
 </section>
 
 <section id="contact">
   <h2 class="section-label">Contact</h2>
+  <p class="section-intro">Based in Bekasi, Indonesia. Interested in data analysis, applied AI, and Python engineering opportunities.</p>
   <ul class="pills">
     <li><a href="mailto:aliefrandiansyahp@gmail.com">aliefrandiansyahp@gmail.com <span class="arr">&#8599;</span></a></li>
     <li><a href="https://github.com/AKARandy">github.com/AKARandy <span class="arr">&#8599;</span></a></li>
@@ -269,9 +280,8 @@
   </ul>
 </section>
 
-<footer>
-  <p>"The plan is to have no plan because if i had a plan they'd plan to counter the plan but since there's no plan they can't plan around the plan i didn't plan"</p>
-</footer>
+</main>
+<footer><p>Alief Randiansyah Pradanaputra · Mathematics, ITS</p><p>Data work, from the first scraped page to the application.</p></footer>
 
 <script src="script.js"></script>
 
