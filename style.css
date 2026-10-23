@@ -394,7 +394,7 @@ footer {
 .project.featured { border-width: 2px; background: var(--paper-2); padding: 25px; }
 .project-wide { grid-column: 1 / -1; }
 .project p.project-kind { color: var(--red-deep); text-transform: uppercase; letter-spacing: .08em; font-size: .72rem; font-weight: 700; }
-.project p.project-lead { font-family: "Playfair Display", serif; font-style: italic; font-size: 1.25rem; line-height: 1.4; }
+.project p.project-lead { font-family: "Inter", sans-serif; font-style: normal; font-weight: 600; font-size: 1.1rem; line-height: 1.6; color: var(--ink-strong); }
 .text-link { border-bottom: 2px solid var(--red); font-weight: 600; }
 .row p.row-summary { font-weight: 600; margin: 10px 0; font-size: 1rem; }
 .experience-featured { border-width: 2px; background: var(--paper-2); }
