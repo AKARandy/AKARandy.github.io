@@ -1,0 +1,60 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.55in]{geometry}
+\usepackage{titlesec,enumitem,tabularx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{iftex}
+\ifPDFTeX\input{glyphtounicode}\pdfgentounicode=1\fi
+\pagestyle{empty}
+\urlstyle{same}
+\raggedright
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\large\scshape}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{5pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=3pt,parsep=0pt}
+\begin{document}
+\begin{center}
+{\LARGE\scshape Alief Randiansyah Pradanaputra}\\[4pt]
+Data Analysis \textbar{} Applied AI \textbar{} Python Engineering\\[4pt]
+\small Bekasi, Indonesia \textbar{} +62 811 1718 588 \textbar{} \href{mailto:aliefrandiansyahp@gmail.com}{aliefrandiansyahp@gmail.com}\\[2pt]
+\href{https://akarandy.github.io/}{Portfolio} \textbar{} \href{https://github.com/AKARandy}{GitHub} \textbar{} \href{https://www.linkedin.com/in/alief-randiansyah}{LinkedIn}
+\end{center}
+\small
+\section{Profile}
+Mathematics graduate who builds data pipelines, analytical tools, and AI applications from source data to working interfaces. Helped launch SEVIMA's K-12 program through its initial data work and built a rule-based validation system for hundreds of thousands of airline records. Combines business analysis with hands-on Python development, model serving, and automated testing.
+\section{Experience}
+\textbf{Pusdatin Kementerian Perhubungan RI} \hfill Sep 2026 - Present\\
+\textit{Pranata Komputer Intern | Jakarta}\par
+\begin{itemize}
+\item Built a pipeline and dashboard processing hundreds of thousands of passenger records from more than 60 airlines; implemented 23 validation checks based on the ministry's reporting guideline.
+\item Served per-airline and per-day quality scorecards through FastAPI. Designed a production architecture with a scheduled worker, MySQL storage, and monthly ingestion; documented system design and an operational runbook.
+\end{itemize}
+\textbf{SEVIMA} \hfill Feb 2025 - Aug 2025\\
+\textit{Data Analyst Intern | Surabaya}\par
+\begin{itemize}
+\item Helped launch the K-12 expansion program as a core contributor to its initial data work. Built tuition-fee analysis and machine-learning customer scoring supporting acquisition of the program's first five school customers.
+\item Scraped and consolidated school and PDDIKTI data for analysis and modeling; analyzed active-user thresholds on the SiAkad platform.
+\end{itemize}
+\section{Selected Projects}
+\textbf{\href{https://github.com/AKARandy/tanya-sekolah}{Tanya Sekolah}} --- \textit{Python, FastAPI, SQLite, ChromaDB, CatBoost}\par
+\begin{itemize}
+\item Built a natural-language application over 2,269 schools, combining guarded read-only SQL, multilingual RAG, and tuition estimation. Added Docker packaging and tests for data preparation, routing fallbacks, and API behavior.
+\end{itemize}
+\textbf{\href{https://github.com/AKARandy/Self-Retraining-Model-Platform}{Self-Retraining Model Platform}} --- \textit{MLflow, Argo Workflows, Kubernetes, PostgreSQL}\par
+\begin{itemize}
+\item Connected ingestion, training, evaluation, and serving in a local containerized platform. Implemented drift-triggered retraining, evaluation-gated promotion, model swaps without API redeployment, and automated checks.
+\end{itemize}
+\textbf{\href{https://github.com/AKARandy/Lights-vs-Numbers}{Lights vs Numbers}} --- \textit{pandas, Plotly, Streamlit}\par
+\begin{itemize}
+\item Cleaned and aligned shipping activity, search trends, and official GDP series across time frequencies; built an annotated dashboard with traceable sources and explicit sample/live-data labels.
+\end{itemize}
+\section{Education \& Recognition}
+\textbf{Institut Teknologi Sepuluh Nopember (ITS)} \hfill Aug 2022 -- Aug 2026\\
+Bachelor of Mathematics (S.Mat)\par\vspace{4pt}
+\textbf{Top 20, Microsoft AI Impact Challenge Datathon 2026} --- DAWG-ID, a macro-shock vulnerability portal covering 38 Indonesian provinces.\par\vspace{4pt}
+\textbf{ITS Team Lead, Satria Data Big Data Challenge} (Aug--Sep 2025); previously taught first-year programming as a laboratory assistant at ITS (Aug--Dec 2024).
+\section{Skills}
+\textbf{Data \& analysis:} Python, pandas, SQL, PostgreSQL, SQLite, Google Sheets, Selenium, Plotly, Streamlit\par\vspace{3pt}
+\textbf{AI \& engineering:} LLM APIs, RAG, ChromaDB, CatBoost, PyTorch, FastAPI, Docker, Kubernetes, MLflow, Argo Workflows, DVC, pytest, GitHub Actions\par\vspace{3pt}
+\textbf{English:} EFL score 567\par\vspace{3pt}
+\end{document}
